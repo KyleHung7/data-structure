@@ -13,7 +13,8 @@
 - 作業2
   
 - 作業3
-  ![成長思維AI Agent](https://github.com/user-attachments/assets/a9b2eb6d-03c3-41fe-8faa-710c822cdc8e)
+  
+  ![成長思維AI Agent](https://github.com/user-attachments/assets/42e38c02-3826-4a9a-8f5e-3d2847f699a0)
 - 作業4 (medium)
 - 作業5 (medium)
 
