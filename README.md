@@ -9,8 +9,11 @@
 
 ## 作業連結區 📝
 - 作業1
+  
 - 作業2
+  
 - 作業3
+  ![成長思維AI Agent](https://github.com/user-attachments/assets/a9b2eb6d-03c3-41fe-8faa-710c822cdc8e)
 - 作業4 (medium)
 - 作業5 (medium)
 
