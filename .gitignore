@@ -5,3 +5,4 @@
 /dataAgent_playwright.py
 /dataAgent_selenium.py
 /main.py
+venv/
