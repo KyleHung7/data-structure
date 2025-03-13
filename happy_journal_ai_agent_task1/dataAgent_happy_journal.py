@@ -61,7 +61,8 @@ async def main():
     )
     termination_condition = TextMentionTermination("exit")
     
-    csv_file_path = "predict_emotion_with_500_cases.csv"  # 用戶自己的日誌文件
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # 獲取當前腳本目錄
+    csv_file_path = os.path.join(script_dir, "predict_emotion_with_500_cases.csv")
     chunk_size = 500
     chunks = list(pd.read_csv(csv_file_path, chunksize=chunk_size))
     total_records = sum(chunk.shape[0] for chunk in chunks)
