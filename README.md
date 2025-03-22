@@ -33,7 +33,7 @@ This project leverages the Gemini API (Large Language Model, LLM) with AutoGen t
 ### Install required Python packages:
 ```bash
 pip install python-dotenv autogen-agentchat autogen-ext[openai] playwright
-
+```
 ## Completed Tasks
 
 ### **AI_Agent_task1**
