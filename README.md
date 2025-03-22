@@ -1,22 +1,61 @@
-# 113-2 師大科技系資料結構
-## 授課教師：蔡芸琤老師
-- 姓名：洪明凱
-- 系級：科技系大二
+# AutoGen Gemini Project
 
-## 課程筆記區 ✍🏻
+## Overview
+This project leverages the Gemini API (Large Language Model, LLM) with AutoGen to create AI agents that solve various problems efficiently. By using AutoGen's multi-agent framework, we implement different use cases such as:
+- Information retrieval
+- Data analysis
+- Interactive AI assistance
 
-## 課堂練習區 📖
+## Example Implementations
 
-## 作業連結區 📝
-- 作業1
-  https://github.com/KyleHung7/data-structure/tree/main/happy_journal_ai_agent_task1
-- 作業2
-  
-- 作業3
-  
-  ![成長思維AI Agent](https://github.com/user-attachments/assets/42e38c02-3826-4a9a-8f5e-3d2847f699a0)
-- 作業4 (medium)
-- 作業5 (medium)
+### 1. Single Query Example (`main.py`)
+- Loads the Gemini API key from `.env`.
+- Uses `OpenAIChatCompletionClient` to connect to Gemini.
+- Sends a query and prints the response in the terminal.
 
-## 專題連結區
+### 2. Multi-Agent File I/O Example (`dataAgent.py`)
+- Constructs a multi-agent team using AutoGen:
+  - **DataAgent** & **MultimodalWebSurfer**: Perform CSV data analysis and external information retrieval.
+  - **UserProxyAgent**: Simulates user interaction.
+- Agents interact in a loop until the conversation is terminated.
+
+### 3. Multi-Agent File I/O with UI Example (`multiDataAgentUI.py`)
+- Integrates Gradio + Gemini API + AutoGen AgentChat.
+- Develops a **Baby Care Data Analysis Tool** that:
+  - Reads CSV-formatted baby care data.
+  - Summarizes and analyzes data.
+  - Provides valuable insights and recommendations.
+
+## Prerequisites
+- **Python** 3.10+
+- **pip**
+
+### Install required Python packages:
+```bash
+pip install python-dotenv autogen-agentchat autogen-ext[openai] playwright
+
+## Completed Tasks
+
+### **AI_Agent_task1**
+- **Task**: Positive feedback for a journal with 500 cases.
+- **Files**:
+  - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
+  - Output: `self_reflection_analysis.csv`
+
+### **AI_Agent_task2**
+- **Task**: Detailed journal analysis with structured feedback:
+  - Positive summary
+  - Highlight strengths
+  - Confidence-boosting suggestions
+  - Motivational insights
+- **Files**:
+  - Input: `journal.py`, `journal.csv`
+  - Output: `journal_output.csv`
+
+## Upcoming Projects
+
+### Flowchart for Future Developments:
+![AI Agent](https://github.com/user-attachments/assets/7f9625b8-f59d-4f3f-bda4-a3d754206550)
+
+
 
