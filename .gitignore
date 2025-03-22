@@ -1,3 +1,4 @@
-.env
+/.env
 venv/
+service_account.json
 node_modules/
