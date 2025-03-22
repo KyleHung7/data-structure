@@ -9,7 +9,7 @@
 
 ## 作業連結區 📝
 - 作業1
-  
+  https://github.com/KyleHung7/data-structure/tree/main/happy_journal_ai_agent_task1
 - 作業2
   
 - 作業3
