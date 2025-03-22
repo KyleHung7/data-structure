@@ -1,0 +1,57 @@
+🔹 步驟 1：開啟 Google Cloud Console
+前往 Google Cloud Console（需要 Google 帳戶）。
+
+建立新專案（如果還沒有）：
+
+在左上角 「選擇專案」 → 點擊 「新建專案」。
+
+輸入專案名稱（例如：GoogleSheetsAPI）。
+
+選擇對應的 組織（如果有的話）。
+
+點擊 「建立」。
+
+🔹 步驟 2：啟用 Google Sheets API & Google Drive API
+在 Google Cloud Console，點擊左側 「API 與服務」 > 「資料庫 API & 服務」。
+
+點擊 「啟用 API 與服務」（Enable APIs & Services）。
+
+在搜尋欄輸入：
+
+Google Sheets API → 點選後點 「啟用」（Enable）。
+
+Google Drive API → 點選後點 「啟用」（Enable）。
+
+
+🔹 步驟 3：建立服務帳戶並下載 JSON 憑證
+✅ 1. 建立新的服務帳戶
+在 Google Cloud Console 的左側選單中，點擊 「IAM 與管理」 → 「服務帳戶」。
+
+點擊 「+ 建立服務帳戶」。
+
+填入 服務帳戶名稱（例如 my-gsheets-bot）。
+
+點擊 「建立並繼續」。
+
+✅ 2. 給予 Google Sheets API 權限
+在「設定服務帳戶權限」頁面，選擇：
+
+角色 → 編輯員（Editor） 或 Google Sheets API 存取權限（建議）。
+
+點擊 「繼續」。
+
+✅ 3. 產生金鑰（JSON 憑證）
+在「授權使用金鑰」區域，點擊 「+ 建立金鑰」。
+
+選擇 「JSON」 格式，然後點擊 「建立」。
+
+你的瀏覽器會自動下載一個 JSON 檔案，請將它儲存到專案目錄下。
+
+
+
+🔹 步驟 4：Python 檔案要裝的套件
+
+pip install gspread pandas google-auth gspread-dataframe
+
+
+
