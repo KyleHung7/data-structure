@@ -36,13 +36,15 @@ pip install python-dotenv autogen-agentchat autogen-ext[openai] playwright
 ```
 ## Completed Tasks
 
-### **AI_Agent_task1**[Links](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task1)
+### **AI_Agent_task1**
+[Task Links](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task1)
 - **Task**: Positive feedback for a journal with 500 cases.
 - **Files**:
   - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
   - Output: `self_reflection_analysis.csv`
 
-### **AI_Agent_task2**[Links](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2)
+### **AI_Agent_task2**
+[Task Links](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2)
 - **Task**: Detailed journal analysis with structured feedback:
   - Positive summary
   - Highlight strengths
