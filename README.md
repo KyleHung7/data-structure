@@ -8,16 +8,13 @@ This project leverages the Gemini API (Large Language Model, LLM) with AutoGen t
 
 ## Example Implementations
 
-### 1.dataAgent_playwright.py
+### 1. Multi-Agent File I/O Example (`dataAgent.py`)
+- Constructs a multi-agent team using AutoGen:
+  - **DataAgent** & **MultimodalWebSurfer**: Perform CSV data analysis and external information retrieval.
+  - **UserProxyAgent**: Simulates user interaction.
+- Agents interact in a loop until the conversation is terminated.
 
-This script demonstrates a multi-agent system using AutoGen, where agents collaborate to analyze CSV data and retrieve external information.
 
-#### Features
-- **Multi-Agent Collaboration**
-  - **DataAgent & MultimodalWebSurfer**: Perform CSV data analysis and external information retrieval.
-  - **UserProxyAgent**: Simulates user interactions.
-- **Interactive Workflow**
-  - Agents engage in an iterative loop until the conversation is terminated.
 
 ---
 
