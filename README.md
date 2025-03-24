@@ -61,6 +61,7 @@ pip install python-dotenv autogen-agentchat autogen-ext[openai] playwright
 ## Upcoming Projects
 
 ### Flowchart for Future Developments:
+![AI Agent](https://github.com/user-attachments/assets/55a6fda6-8e58-402e-8a32-1cdbd18dde6d)
 
 
 
