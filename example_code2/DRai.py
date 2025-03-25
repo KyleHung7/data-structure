@@ -90,10 +90,11 @@ def process_batch_dialogue(client, dialogues: list, delimiter="-----"):
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=content
-        )
-    except ServerError as e:
+    )
+    except Exception as e:  # 改成捕捉所有異常
         print(f"API 呼叫失敗：{e}")
         return [{item: "" for item in ITEMS} for _ in dialogues]
+
     
     print("批次 API 回傳內容：", response.text)
     parts = response.text.split(delimiter)
