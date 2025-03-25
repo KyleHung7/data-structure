@@ -8,29 +8,37 @@ This project leverages the Gemini API (Large Language Model, LLM) with AutoGen t
 
 ## Example Implementations
 
-### 1. Single Query Example (`main.py`)
-- Loads the Gemini API key from `.env`.
-- Uses `OpenAIChatCompletionClient` to connect to Gemini.
-- Sends a query and prints the response in the terminal.
+### 1. Multi-Agent File I/O Example (`dataAgent_playwright.py`)
 
-### 2. Multi-Agent Conversation Example (`multiAgent.py`)
-- Builds a multi-agent team using AutoGen:
-  - **AssistantAgent** & **MultimodalWebSurfer**: Handle responses and information retrieval.
-  - **UserProxyAgent**: Simulates user interaction.
-- Agents communicate in a loop until encountering the `"exit"` keyword.
+This script demonstrates a multi-agent system using AutoGen, where agents collaborate to analyze CSV data and retrieve external information.
 
-### 3. Multi-Agent File I/O Example (`dataAgent.py`)
-- Constructs a multi-agent team using AutoGen:
-  - **DataAgent** & **MultimodalWebSurfer**: Perform CSV data analysis and external information retrieval.
-  - **UserProxyAgent**: Simulates user interaction.
-- Agents interact in a loop until the conversation is terminated.
+#### Features
+- **Multi-Agent Collaboration**
+  - **DataAgent & MultimodalWebSurfer**: Perform CSV data analysis and external information retrieval.
+  - **UserProxyAgent**: Simulates user interactions.
+- **Interactive Workflow**
+  - Agents engage in an iterative loop until the conversation is terminated.
 
-### 4. Multi-Agent File I/O with UI Example (`multiDataAgentUI.py`)
-- Integrates Gradio + Gemini API + AutoGen AgentChat.
-- Develops a **Baby Care Data Analysis Tool** that:
-  - Reads CSV-formatted baby care data.
-  - Summarizes and analyzes data.
-  - Provides valuable insights and recommendations.
+---
+
+### 2. Batch Evaluation Process (`DRai.py`)
+
+This script evaluates speech transcriptions in batches using the Google Gemini API.
+
+#### Features
+- **CSV Input Handling**
+  - Selects the appropriate column for transcriptions (`text`, `utterance`, `content`, or `dialogue`).
+- **Batch Processing**
+  - Groups multiple transcriptions into a single batch request.
+  - Formats results as JSON with a custom delimiter (`-----`).
+- **API Integration**
+  - Calls the Google Gemini API for evaluation.
+  - Cleans and parses responses to ensure completeness.
+- **Real-Time Output Writing**
+  - Appends processed batches to `113_batch.csv` to prevent data loss.
+- **Rate Limiting**
+  - Implements a 1-second delay between batch requests to prevent exceeding API limits.
+
 
 ## Prerequisites
 - **Python** 3.10+
@@ -61,6 +69,7 @@ pip install python-dotenv autogen-agentchat autogen-ext[openai] playwright
 ## Upcoming Projects
 
 ### Flowchart for Future Developments:
+![AI Agent](https://github.com/user-attachments/assets/55a6fda6-8e58-402e-8a32-1cdbd18dde6d)
 
 
 
