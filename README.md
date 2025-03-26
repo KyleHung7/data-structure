@@ -77,7 +77,7 @@ pip install autogen selenium webdriver-manager
   - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
   - Output: `self_reflection_analysis.csv`
 
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazV3bmt2M2p0d3czYXpvYWU0cmZ2dHFraHZzb2Fxb3Bmb3B1OXhqZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2d4aXKsL0KJltwMcFD/giphy.gif" width="3500">
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazV3bmt2M2p0d3czYXpvYWU0cmZ2dHFraHZzb2Fxb3Bmb3B1OXhqZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2d4aXKsL0KJltwMcFD/giphy.gif" width="5000">
 
 
 
