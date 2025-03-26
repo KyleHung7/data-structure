@@ -1,7 +1,15 @@
 # AutoGen Gemini Project
 
+## Course Information
+This project is part of the **Data Structure** course taught by **Professor Yun-Cheng Tsai**. The course focuses on hands-on practice to help students apply data structures to real-world problems.
+
+### Course Objectives
+1. **Practical Application**: Emphasize hands-on exercises to enable students to use data structures in solving real-world problems.
+2. **Conceptual Understanding**: Enhance comprehension through theoretical explanations, real-world examples, and practical exercises.
+3. **Intellectual Property Awareness**: Develop an understanding of the value and challenges of implementing theoretical concepts into practical programming frameworks, fostering respect for intellectual property rights.
+
 ## Overview
-This project leverages the Gemini API (Large Language Model, LLM) with AutoGen to create AI agents that solve various problems efficiently. By using AutoGen's multi-agent framework, we implement different use cases such as:
+This project leverages the **Gemini API** (Large Language Model, LLM) with **AutoGen** to create AI agents that solve various problems efficiently. By utilizing AutoGen's multi-agent framework, we implement different use cases such as:
 - Information retrieval
 - Data analysis
 - Interactive AI assistance
@@ -9,7 +17,6 @@ This project leverages the Gemini API (Large Language Model, LLM) with AutoGen t
 ## Example Implementations
 
 ### 1. Multi-Agent File I/O Example (`dataAgent_playwright.py`)
-
 This script demonstrates a multi-agent system using AutoGen, where agents collaborate to analyze CSV data and retrieve external information.
 
 #### Features
@@ -22,7 +29,6 @@ This script demonstrates a multi-agent system using AutoGen, where agents collab
 ---
 
 ### 2. Batch Evaluation Process (`DRai.py`)
-
 This script evaluates speech transcriptions in batches using the Google Gemini API.
 
 #### Features
@@ -39,14 +45,28 @@ This script evaluates speech transcriptions in batches using the Google Gemini A
 - **Rate Limiting**
   - Implements a 1-second delay between batch requests to prevent exceeding API limits.
 
-
 ## Prerequisites
 - **Python** 3.10+
-- **pip**
 
-### Install required Python packages:
+### Installation Steps:
 ```bash
-pip install python-dotenv autogen-agentchat autogen-ext[openai] playwright
+python -m venv venv
+.\venv\Scripts\activate
+
+# Install AutoGen and dependencies
+pip install -U autogen-agentchat autogen-ext[openai,web-surfer] python-dotenv
+pip install autogen-agentchat python-dotenv playwright
+playwright install
+
+# Install AutoGen Studio
+pip install -U autogenstudio
+autogenstudio ui --port 8080 --appdir ./my-app
+# Open in browser
+http://localhost:8080
+
+# If Playwright fails to install, use Selenium instead
+pip install selenium webdriver-manager
+pip install autogen selenium webdriver-manager
 ```
 ## Completed Tasks
 
