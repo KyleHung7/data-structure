@@ -77,6 +77,10 @@ pip install autogen selenium webdriver-manager
   - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
   - Output: `self_reflection_analysis.csv`
 
+
+https://github.com/user-attachments/assets/cbe3d604-f684-4f3d-a2a6-ceda03806069
+
+
 ### **AI_Agent_task2**
 [Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2)
 - **Task**: Detailed journal analysis with structured feedback:
