@@ -91,7 +91,8 @@ pip install autogen selenium webdriver-manager
   - Input: `journal.py`, `journal.csv`
   - Output: `journal_output.csv`
 
-![task2](https://github.com/user-attachments/assets/6e01d8e1-4fb7-4ff8-9255-949cad3102f5)
+![task2](https://github.com/user-attachments/assets/684163d5-0af5-418e-ac3b-995574890f3f)
+
 
   
 ### **AI_Agent_task3**
