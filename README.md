@@ -77,6 +77,9 @@ pip install autogen selenium webdriver-manager
   - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
   - Output: `self_reflection_analysis.csv`
 
+<video width="1000" autoplay loop muted>
+  <source src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazV3bmt2M2p0d3czYXpvYWU0cmZ2dHFraHZzb2Fxb3Bmb3B1OXhqZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2d4aXKsL0KJltwMcFD/giphy.gif" type="video/mp4">
+</video>
 
 ### **AI_Agent_task2**
 [Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2)
