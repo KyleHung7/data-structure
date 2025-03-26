@@ -71,12 +71,14 @@ pip install autogen selenium webdriver-manager
 ## Completed Tasks
 
 ### **AI_Agent_task1**
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task1)
 - **Task**: Positive feedback for a journal with 500 cases.
 - **Files**:
   - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
   - Output: `self_reflection_analysis.csv`
 
 ### **AI_Agent_task2**
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2)
 - **Task**: Detailed journal analysis with structured feedback:
   - Positive summary
   - Highlight strengths
@@ -85,7 +87,20 @@ pip install autogen selenium webdriver-manager
 - **Files**:
   - Input: `journal.py`, `journal.csv`
   - Output: `journal_output.csv`
+  
+### **AI_Agent_task3**
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task3)
+- **Task**: Automate NTNU Moodle calendar task extraction and export:
+  - Open NTNU Moodle and log in
+  - Capture a screenshot after successful login
+  - Navigate to the calendar page
+  - Extract tasks and deadlines
+  - Export data to a CSV file
 
+- **Files**:
+  - Input: `moodle.py`
+  - Output: `moodle_login_success.png`, `calendar_events.csv`
+    
 ## Upcoming Projects
 
 ### Flowchart for Future Developments:
