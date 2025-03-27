@@ -53,7 +53,12 @@ def fetch_moodle_calendar():
         page.goto("https://moodle3.ntnu.edu.tw/calendar/view.php?view=month")
         page.wait_for_selector("td[data-region='day']", timeout=30000)
         print("📅 進入行事曆頁面...")
+        page.wait_for_timeout(3000)
         
+        screenshot_path = "moodle_calendar_screenshot.png"
+        page.screenshot(path=screenshot_path)
+        print(f"📸 行事曆畫面已截圖: {screenshot_path}")
+
         events = page.evaluate(f"""
             () => {{
                 let events = [];
@@ -122,6 +127,7 @@ def add_events_to_google_calendar():
     
     # 打開 Google Calendar
     webbrowser.open("https://calendar.google.com")
+
 
 if __name__ == "__main__":
     fetch_moodle_calendar()
