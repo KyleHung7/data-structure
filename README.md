@@ -80,7 +80,7 @@ pip install autogen selenium webdriver-manager
 ![task1](https://github.com/user-attachments/assets/b8d06ad7-2e06-4e9b-be4a-8924cbcd0af5)
 
 
-### **AI_Agent_task2**
+### **AI_Agent_task2_1.0**
 [Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2)
 - **Task**: Detailed journal analysis with structured feedback:
   - Positive summary
@@ -91,8 +91,11 @@ pip install autogen selenium webdriver-manager
   - Input: `journal.py`, `journal.csv`
   - Output: `journal_output.csv`
 
-![task2](https://github.com/user-attachments/assets/684163d5-0af5-418e-ac3b-995574890f3f)
+![task2_1.0](https://github.com/user-attachments/assets/684163d5-0af5-418e-ac3b-995574890f3f)
 
+### **AI_Agent_task2_2.0**
+
+![task2_2 0](https://github.com/user-attachments/assets/b43625a0-b59d-48ab-baf0-937e5e65026b)
 
   
 ### **AI_Agent_task3**
