@@ -67,6 +67,10 @@ http://localhost:8080
 # If Playwright fails to install, use Selenium instead
 pip install selenium webdriver-manager
 pip install autogen selenium webdriver-manager
+
+# If you encounter a CP950 encoding error during testing, you may need to modify the playwright_controller.py file in the virtual environment. The issue might occur at line 68, where with open is used. Modify it as follows to ensure UTF-8 encoding
+with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.js"), "r", encoding="utf-8") as fh:
+    self._page_script = fh.read()
 ```
 ## Completed Tasks
 
