@@ -143,7 +143,8 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 - **Files**:
   - Input: `moodle.py`
   - Output: `moodle_login_success.png`, `calendar_events.csv`
-    
+ ![task3](https://github.com/user-attachments/assets/8e83a2eb-9de5-44f0-a09c-8c67c27bb21e)
+   
 ## Upcoming Projects
 
 ### Flowchart for Future Developments:
