@@ -50,9 +50,9 @@ async def process_reflection(user_journal, start_idx, total_records, model_clien
     return messages
 
 async def main():
-    gemini_api_key = os.environ.get("GEMINI_API_TOKEN")
+    gemini_api_key = os.environ.get("GEMINI_API_KEY")
     if not gemini_api_key:
-        print("請檢查 .env 檔案中的 GEMINI_API_TOKEN。")
+        print("請檢查 .env 檔案中的 GEMINI_API_KEY。")
         return
 
     model_client = OpenAIChatCompletionClient(

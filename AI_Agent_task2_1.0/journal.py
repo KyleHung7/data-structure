@@ -4,8 +4,7 @@ import time
 import pandas as pd
 import sys
 from dotenv import load_dotenv
-from google import genai
-
+import google.generativeai as genai  # 修正 import
 
 # 載入 .env 中的 GEMINI_API_KEY
 load_dotenv()
@@ -19,13 +18,7 @@ ITEMS = [
 ]
 
 def parse_response(response_text):
-    """
-    嘗試解析 Gemini API 回傳的 JSON 格式結果。
-    如果回傳內容被 markdown 的反引號包圍，則先移除這些標記。
-    若解析失敗，則回傳所有項目皆為空的字典。
-    """
     cleaned = response_text.strip()
-    # 如果回傳內容以三個反引號開始，則移除第一行和最後一行
     if cleaned.startswith("```"):
         lines = cleaned.splitlines()
         if lines[0].startswith("```"):
@@ -46,11 +39,6 @@ def parse_response(response_text):
         return {item: "" for item in ITEMS}
 
 def select_dialogue_column(chunk: pd.DataFrame) -> str:
-    """
-    根據 CSV 欄位內容自動選取存放逐字稿的欄位。
-    優先檢查常見欄位名稱："日誌內容"
-    若都不存在，則回傳第一個欄位。
-    """
     preferred = ["日誌內容"]
     for col in preferred:
         if col in chunk.columns:
@@ -58,12 +46,7 @@ def select_dialogue_column(chunk: pd.DataFrame) -> str:
     print("CSV 欄位：", list(chunk.columns))
     return chunk.columns[0]
 
-def process_batch_dialogue(client, dialogues: list, delimiter="-----"):
-    """
-    將多筆逐字稿合併成一個批次請求。
-    提示中要求模型對每筆逐字稿產生 JSON 格式回覆，
-    並以指定的 delimiter 分隔各筆結果。
-    """
+def process_batch_dialogue(dialogues: list, delimiter="-----"):
     prompt = (
         "你是一位語言分析專家，請根據以下編碼規則評估使用者寫日誌時的每一句話，\n"
         + "\n".join(ITEMS) +
@@ -79,12 +62,9 @@ def process_batch_dialogue(client, dialogues: list, delimiter="-----"):
     batch_text = f"\n{delimiter}\n".join(dialogues)
     content = prompt + "\n\n" + batch_text
 
-    response = client.models.generate_content(
-    model="gemini-2.0-flash",
-    contents=content
-)
+    model = genai.GenerativeModel("gemini-1.5-flash")  # 修正這裡
+    response = model.generate_content(content)
 
-    
     print("批次 API 回傳內容：", response.text)
     parts = response.text.split(delimiter)
     results = []
@@ -92,7 +72,6 @@ def process_batch_dialogue(client, dialogues: list, delimiter="-----"):
         part = part.strip()
         if part:
             results.append(parse_response(part))
-    # 若結果數量多於原始筆數，僅取前面對應筆數；若不足則補足空結果
     if len(results) > len(dialogues):
         results = results[:len(dialogues)]
     elif len(results) < len(dialogues):
@@ -113,8 +92,10 @@ def main():
     gemini_api_key = os.environ.get("GEMINI_API_KEY")
     if not gemini_api_key:
         raise ValueError("請設定環境變數 GEMINI_API_KEY")
-    client = genai.Client(api_key=gemini_api_key)
     
+    # 正確設定 API 金鑰
+    genai.configure(api_key=gemini_api_key)
+
     dialogue_col = select_dialogue_column(df)
     print(f"使用欄位作為逐字稿：{dialogue_col}")
     
@@ -125,7 +106,7 @@ def main():
         batch = df.iloc[start_idx:end_idx]
         dialogues = batch[dialogue_col].tolist()
         dialogues = [str(d).strip() for d in dialogues]
-        batch_results = process_batch_dialogue(client, dialogues)
+        batch_results = process_batch_dialogue(dialogues)
         batch_df = batch.copy()
         for item in ITEMS:
             batch_df[item] = [res.get(item, "") for res in batch_results]
