@@ -17,6 +17,8 @@ This project leverages the **Gemini API** (Large Language Model, LLM) with **Aut
 ## Example Implementations
 
 ### 1. Multi-Agent File I/O Example (`dataAgent_playwright.py`)
+**Folder:** `example_code1`
+
 This script demonstrates a multi-agent system using AutoGen, where agents collaborate to analyze CSV data and retrieve external information.
 
 #### Features
@@ -29,6 +31,8 @@ This script demonstrates a multi-agent system using AutoGen, where agents collab
 ---
 
 ### 2. Batch Evaluation Process (`DRai.py`)
+**Folder:** `example_code2_1.0`
+
 This script evaluates speech transcriptions in batches using the Google Gemini API.
 
 #### Features
@@ -44,6 +48,19 @@ This script evaluates speech transcriptions in batches using the Google Gemini A
   - Appends processed batches to `113_batch.csv` to prevent data loss.
 - **Rate Limiting**
   - Implements a 1-second delay between batch requests to prevent exceeding API limits.
+
+---
+
+### 3. Multi-Agent File I/O and Multi-Model UI Example (`multiDataAgentUI.py`)
+**Folder:** `example_code2_2.0`
+
+This script utilizes **Gradio + Gemini API + AutoGen AgentChat** to create a **baby care data analysis tool**. It reads baby care data from a CSV file, automatically summarizes it, and provides valuable recommendations.
+
+#### Features
+- **Interactive UI**: Built using Gradio for user-friendly interactions.
+- **Multi-Agent System**: Integrates AutoGen AgentChat to perform data analysis and summarization.
+- **LLM-Powered Insights**: Uses Gemini API to generate valuable baby care suggestions based on data trends.
+
 
 ## Prerequisites
 - **Python** 3.10+
@@ -77,6 +94,10 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 ### **AI_Agent_task1**
 [Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task1)
 - **Task**: Positive feedback for what you type.
+  - Positive summary
+  - Highlight strengths
+  - Confidence-boosting suggestions
+  - Motivational insights
 - **Files**:
   - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
   - Output: `self_reflection_analysis.csv`
@@ -85,7 +106,7 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 
 
 ### **AI_Agent_task2_1.0**
-[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2)
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2_1.0)
 - **Task**: Detailed journal analysis with structured feedback:
   - Positive summary
   - Highlight strengths
@@ -98,10 +119,18 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 ![task2_1.0](https://github.com/user-attachments/assets/684163d5-0af5-418e-ac3b-995574890f3f)
 
 ### **AI_Agent_task2_2.0**
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2_2.0)
+- **Task**: Create a user interface for journal analysis with structured feedback, including:
+  - Positive summary
+  - Highlight strengths
+  - Confidence-boosting suggestions
+  - Motivational insights
+- **Files**:
+  - Input: `journalUI.py`
+  - Output: `journalUI_output.csv`
 
-![task2_2 0](https://github.com/user-attachments/assets/b43625a0-b59d-48ab-baf0-937e5e65026b)
+![task2_2 0](https://github.com/user-attachments/assets/88d1970d-a1f7-43fd-923a-77c4affce10c)
 
-  
 ### **AI_Agent_task3**
 [Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task3)
 - **Task**: Automate NTNU Moodle calendar task extraction and export:
