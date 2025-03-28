@@ -120,7 +120,7 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 
 ### **AI_Agent_task2_2.0**
 [Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2_2.0)
-- **Task**: Create a user interface for journal analysis with structured feedback, including:
+- **Task**: Create a user interface for journal analysis with structured feedback:
   - Positive summary
   - Highlight strengths
   - Confidence-boosting suggestions
