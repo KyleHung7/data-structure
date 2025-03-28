@@ -143,10 +143,12 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 
 - **Files**:
   - Input: `moodle.py`
-  - Output: `moodle_login_success.png`, `calendar_events.csv`
+  - Output: `moodle_calendar_screenshot.png`, `calendar_events.csv`
 
-![image](https://github.com/user-attachments/assets/281a211d-54ee-44a2-a6f4-30c8b9c24bc5) ![image](https://github.com/user-attachments/assets/d515bd04-9e8a-41df-9b4d-7f6b69ebe54a)
-
+<div style="display: flex; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/281a211d-54ee-44a2-a6f4-30c8b9c24bc5" width="150">
+  <img src="https://github.com/user-attachments/assets/d515bd04-9e8a-41df-9b4d-7f6b69ebe54a" width="150">
+</div>
 
 - **Video**:
 
