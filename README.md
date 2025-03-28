@@ -145,6 +145,7 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Output: `moodle_login_success.png`, `calendar_events.csv`
 
 ![task3](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGU3ZXViczB0NHk3bjNncmdzaDhuYjB4bGxpbXMzcnNidnd3czF2NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/odlmSVIkDHYGYa8OUk/giphy.gif)
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDQzNzcxb3l0ZTE5MGhhb3d4dHJ3YWpqMHM0czdoaHFpcm50ZTZnbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kx20VhVnaSGZi4uS5v/giphy.gif" width="1000" height="auto">
 
 
    
