@@ -98,10 +98,10 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Highlight strengths
   - Confidence-boosting suggestions
   - Motivational insights
-- **Files**:
+- **File**:
   - Input: `dataAgent_happy_journal.py`, `predict_emotion_with_500_cases.csv`
   - Output: `self_reflection_analysis.csv`
-
+- **Picture**:
 ![task1](https://github.com/user-attachments/assets/b8d06ad7-2e06-4e9b-be4a-8924cbcd0af5)
 
 
@@ -112,10 +112,10 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Highlight strengths
   - Confidence-boosting suggestions
   - Motivational insights
-- **Files**:
+- **File**:
   - Input: `journal.py`, `journal.csv`
   - Output: `journal_output.csv`
-
+- **Picture**:
 ![task2_1.0](https://github.com/user-attachments/assets/684163d5-0af5-418e-ac3b-995574890f3f)
 
 ### **AI_Agent_task2_2.0**
@@ -125,10 +125,10 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Highlight strengths
   - Confidence-boosting suggestions
   - Motivational insights
-- **Files**:
+- **File**:
   - Input: `journalUI.py`
   - Output: `journalUI_output.csv`
-
+- **Picture**:
 ![task2_2 0](https://github.com/user-attachments/assets/88d1970d-a1f7-43fd-923a-77c4affce10c)
 
 ### **AI_Agent_task3**
@@ -141,14 +141,14 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Export data to a CSV file
   - Upload to Google calendar
 
-- **Files**:
+- **File**:
   - Input: `moodle.py`
   - Output: `moodle_calendar_screenshot.png`, `calendar_events.csv`
 
-<div style="display: flex; gap: 10px;">
-  <img src="https://github.com/user-attachments/assets/281a211d-54ee-44a2-a6f4-30c8b9c24bc5" width="500">
-  <img src="https://github.com/user-attachments/assets/d515bd04-9e8a-41df-9b4d-7f6b69ebe54a" width="500">
-</div>
+- **Picture**:
+  
+![image](https://github.com/user-attachments/assets/281a211d-54ee-44a2-a6f4-30c8b9c24bc5) 
+![image](https://github.com/user-attachments/assets/d515bd04-9e8a-41df-9b4d-7f6b69ebe54a)
 
 - **Video**:
 
