@@ -144,7 +144,7 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Input: `moodle.py`
   - Output: `moodle_login_success.png`, `calendar_events.csv`
 
-![task3](https://github.com/user-attachments/assets/863fa45a-917c-483f-abe4-6370979b48c9)
+![task3](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGU3ZXViczB0NHk3bjNncmdzaDhuYjB4bGxpbXMzcnNidnd3czF2NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/odlmSVIkDHYGYa8OUk/giphy.gif)
 
 
    
