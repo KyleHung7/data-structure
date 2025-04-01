@@ -134,13 +134,13 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 
 ### **AI_Agent_task2_2.0**
 [Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task2_2.0)
-- **Task**: Create a user interface for journal analysis with structured feedback:
+- **Task**: Develop a user interface for journal analysis that provides structured feedback and generates CSV output.
   - Positive summary
   - Highlight strengths
   - Confidence-boosting suggestions
   - Motivational insights
 - **File**:
-  - Input: `journalUI.py`
+  - Input: `journalUI.py`, `journal_example.csv`
   - Output: `journalUI_output.csv`
 - **Picture**:
 ![task2_2 0](https://github.com/user-attachments/assets/88d1970d-a1f7-43fd-923a-77c4affce10c)
@@ -168,6 +168,18 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 
 ![task3](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDQzNzcxb3l0ZTE5eWhhb3d4dHJ3YWpqMHM0czdoaHFpcm50ZTZnbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kx20VhVnaSGZi4uS5v/giphy.gif)
 
+
+### **AI_Agent_task4**
+[Task File Path]()
+- **Task**: Develop a user interface for journal analysis that provides structured feedback and generates PDF output.
+  - Positive summary
+  - Highlight strengths
+  - Confidence-boosting suggestions
+  - Motivational insights
+- **File**:
+  - Input: `journalPDF.py`, `journal_example.csv`
+  - Output: `journalPDF_output.csv`
+- **Picture**:
 
 
    
