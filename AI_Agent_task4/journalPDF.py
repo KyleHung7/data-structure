@@ -80,7 +80,7 @@ def generate_html(df: pd.DataFrame) -> str:
 
 # 轉換 HTML 到 PDF
 def generate_pdf_from_html(html_content: str) -> str:
-    pdf_filename = f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+    pdf_filename = "journalPDF_output.pdf"  # 固定 PDF 名稱
     pdfkit.from_string(html_content, pdf_filename, configuration=config)
     return pdf_filename
 
@@ -126,13 +126,13 @@ def gradio_handler(csv_file, user_prompt):
 
 # Gradio 介面
 with gr.Blocks() as demo:
-    gr.Markdown("# CSV 報表生成器")
+    gr.Markdown("### 📖 AI 日誌分析系統")
     with gr.Row():
         csv_input = gr.File(label="上傳 CSV 檔案")
         user_input = gr.Textbox(label="請輸入分析指令", lines=10, value=default_prompt)
     output_text = gr.HTML(label="HTML 預覽")
-    output_pdf = gr.File(label="下載 PDF 報表")
-    submit_button = gr.Button("生成報表")
+    output_pdf = gr.File(label="下載 PDF 報告")
+    submit_button = gr.Button("生成分析報告")
     submit_button.click(fn=gradio_handler, inputs=[csv_input, user_input], outputs=[output_text, output_pdf])
 
 demo.launch()
