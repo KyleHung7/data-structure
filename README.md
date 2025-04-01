@@ -61,6 +61,20 @@ This script utilizes **Gradio + Gemini API + AutoGen AgentChat** to create a **b
 - **Multi-Agent System**: Integrates AutoGen AgentChat to perform data analysis and summarization.
 - **LLM-Powered Insights**: Uses Gemini API to generate valuable baby care suggestions based on data trends.
 
+### 4. PDF Report Generation and Analysis (getPDF.py)
+**Folder:** example_code4
+
+This script leverages **FPDF** to generate PDF reports from CSV or text data, offering an elegant display of tables with alternating background colors and automatic pagination.
+
+#### Features
+- **PDF Report Generation:** Uses FPDF to convert CSV or text data into a PDF report, featuring beautiful table displays with alternating background colors and auto-pagination.
+
+- **Chinese Font Detection and Loading:** On Windows systems, the script searches for suitable Chinese fonts (e.g., kaiu.ttf) and loads them into the PDF report. If no compatible font is found, an error message is displayed.
+
+- **Markdown Table Parsing:** Supports extracting data from Markdown-formatted tables and converting it into a pandas DataFrame, making it easy to present the data in table format in the PDF report.
+
+- **Gradio User Interface:** Provides a Gradio-based web interface where users can upload CSV files and input custom analysis commands (default commands include scoring rules). The system processes the CSV data in blocks, calling the Gemini API for responses, and finally merges all responses to generate a downloadable PDF report for easy sharing.
+
 
 ## Prerequisites
 - **Python** 3.10+
