@@ -62,7 +62,7 @@ This script utilizes **Gradio + Gemini API + AutoGen AgentChat** to create a **b
 - **LLM-Powered Insights**: Uses Gemini API to generate valuable baby care suggestions based on data trends.
 
 ### 4. PDF Report Generation and Analysis (getPDF.py)
-**Folder:** example_code4
+**Folder:** `example_code4`
 
 This script leverages **FPDF** to generate PDF reports from CSV or text data, offering an elegant display of tables with alternating background colors and automatic pagination.
 
