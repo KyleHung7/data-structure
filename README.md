@@ -170,7 +170,7 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 
 
 ### **AI_Agent_task4**
-[Task File Path]()
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task4)
 - **Task**: Develop a user interface for journal analysis that provides structured feedback and generates PDF output.
   - Positive summary
   - Highlight strengths
@@ -180,6 +180,7 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Input: `journalPDF.py`, `journal_example.csv`
   - Output: `journalPDF_output.csv`
 - **Picture**:
+![image](https://github.com/user-attachments/assets/54f77bf0-e62d-4d72-abe0-ab82369c00e3)
 
 
    
