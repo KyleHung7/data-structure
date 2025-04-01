@@ -181,6 +181,7 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
   - Output: `journalPDF_output.csv`
 - **Picture**:
 ![image](https://github.com/user-attachments/assets/54f77bf0-e62d-4d72-abe0-ab82369c00e3)
+![image](https://github.com/user-attachments/assets/f378db97-b7c6-4961-a8fc-871feb507721)
 
 
    
