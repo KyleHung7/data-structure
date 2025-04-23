@@ -184,6 +184,10 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 ![image](https://github.com/user-attachments/assets/f378db97-b7c6-4961-a8fc-871feb507721)
 
 
+### **AI_Agent_task4_2.0**
+![image](https://github.com/user-attachments/assets/26c817ec-cdb3-4ef2-b6ec-93f104b0e7f0)
+![image](https://github.com/user-attachments/assets/ff69639f-c147-4d8c-a030-acbc7de52028)
+
    
 ## Upcoming Projects
 
