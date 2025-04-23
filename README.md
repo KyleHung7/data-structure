@@ -169,8 +169,8 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 ![task3](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDQzNzcxb3l0ZTE5eWhhb3d4dHJ3YWpqMHM0czdoaHFpcm50ZTZnbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kx20VhVnaSGZi4uS5v/giphy.gif)
 
 
-### **AI_Agent_task4**
-[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task4)
+### **AI_Agent_task4_1.0**
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task4_1.0)
 - **Task**: Develop a user interface for journal analysis that provides structured feedback and generates PDF output.
   - Positive summary
   - Highlight strengths
@@ -185,6 +185,16 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "page_script.
 
 
 ### **AI_Agent_task4_2.0**
+[Task File Path](https://github.com/KyleHung7/data-structure/tree/main/AI_Agent_task4_2.0)
+- **Task**: Develop a user interface for journal analysis that provides structured feedback and generates PDF output and send it to gmail.
+  - Positive summary
+  - Highlight strengths
+  - Confidence-boosting suggestions
+  - Motivational insights
+- **File**:
+  - Input: `gmail_journalPDF.py`, `journal_example.csv`
+  - Output: `journalPDF_output.csv`
+- **Picture**:
 ![image](https://github.com/user-attachments/assets/26c817ec-cdb3-4ef2-b6ec-93f104b0e7f0)
 ![image](https://github.com/user-attachments/assets/ff69639f-c147-4d8c-a030-acbc7de52028)
 
