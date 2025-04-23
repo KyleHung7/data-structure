@@ -11,8 +11,7 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 import pdfkit
 from jinja2 import Template
-import asyncio
-from playwright.async_api import async_playwright
+
 
 # 🧩 設定 wkhtmltopdf 路徑
 WKHTMLTOPDF_PATH = "D:/wkhtmltopdf/bin/wkhtmltopdf.exe"
