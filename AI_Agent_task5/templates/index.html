@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日誌分析系統</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #34495e;
+            margin: 20px 0;
+        }
+        .upload-section {
+            background: #e8f0fe;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .upload-section input[type="file"] {
+            display: none;
+        }
+        .upload-section label {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .upload-section label:hover {
+            background: #2980b9;
+        }
+        .upload-section button {
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s;
+        }
+        .upload-section button:hover {
+            background: #27ae60;
+        }
+        .trend-plot {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .trend-plot img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .messages {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            min-height: 50px;
+            margin-top: 20px;
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+        .loading {
+            display: none;
+            font-size: 1em;
+            color: #3498db;
+            margin-top: 10px;
+        }
+        .loading.active {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .upload-section button {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📖 AI 日誌分析系統</h1>
+        <p style="color: #7f8c8d; margin-bottom: 20px;">上傳你的日誌，探索信心的變化趨勢</p>
+        <div class="upload-section">
+            <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="file-input">選擇 CSV 檔案</label>
+                <input id="file-input" type="file" name="file" accept=".csv" required>
+                <button type="submit">上傳並分析</button>
+            </form>
+            <div class="loading">正在分析，請稍候...</div>
+        </div>
+        <h2>信心變化趨勢圖</h2>
+        <div class="trend-plot">
+            <img id="trend_plot" src="" alt="信心趨勢圖" style="display:none;">
+        </div>
+        <div class="messages" id="messages"></div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect('http://' + document.domain + ':' + location.port);
+        const form = document.getElementById('upload-form');
+        const fileInput = document.getElementById('file-input');
+        const messages = document.getElementById('messages');
+        const trendPlot = document.getElementById('trend_plot');
+        const loading = document.querySelector('.loading');
+
+        // 顯示選擇的檔案名稱
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                messages.innerText = `已選擇檔案：${fileInput.files[0].name}`;
+            }
+        });
+
+        // 表單提交事件
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            loading.classList.add('active');
+            messages.innerText = '🟢 檔案上傳中...';
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                messages.innerText = `❌ 上傳失敗：${error.message}`;
+                loading.classList.remove('active');
+            });
+        });
+
+        // SocketIO 事件
+        socket.on('update', (data) => {
+            messages.innerText = data.message;
+            if (data.message.includes('分析完成') || data.message.includes('錯誤')) {
+                loading.classList.remove('active');
+            }
+        });
+
+        socket.on('plot_generated', (data) => {
+            trendPlot.src = data.plot_url;
+            trendPlot.style.display = 'block';
+            loading.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
